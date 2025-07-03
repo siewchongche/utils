@@ -86,3 +86,13 @@ export const getV2Volume = async (
     buyVolume: Number(formatEther(buyVolume)),
   };
 };
+
+export const getBuyRatio = (
+  totalVolume: number,
+  totalBuyVolume: number
+): number => {
+  if (totalVolume === 0 || totalBuyVolume === 0) {
+    return 0;
+  }
+  return totalBuyVolume / totalVolume;
+};
