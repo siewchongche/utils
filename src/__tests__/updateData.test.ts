@@ -13,14 +13,23 @@ describe("updateData", () => {
     // Fake data
     const data = [
       {
+        // Sample code in volume.ts
         buyRatio: parseEther("1"),
+        // Sample code in cryptoFearAndGreed.ts
         cryptoFearAndGreed: parseEther("1"),
+        // Current volume
         volume: parseEther("1"),
+        // Always false
         isFlashLoan: false,
+        // Sample code in washTrading.ts, TODO
         isWashTrading: false,
+        // Always false for now
         isLiquiditySniping: false,
+        // Fetch all records within 24 hours from database and sum up volume
         volume24Hrs: parseEther("10"),
+        // Fetch all records between 48 hours and 24 hours from database and sum up volume
         volumePrevious24Hrs: parseEther("10"),
+        // Time now in seconds
         timestamp: BigInt(Math.floor(Date.now() / 1000)),
       },
     ];
